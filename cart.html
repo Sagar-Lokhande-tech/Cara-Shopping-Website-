@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara-EcommerceWebsite</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="lg-bag"><a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </a></li>
+        <a href="#" id="close"><i class="fa fa-times" aria-hidden="true"></i>
+          </i></a>
+
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="card.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+      <i id="bar" class="fas fa-outdent"></i>
+
+    </div>
+  </section>
+
+  <section id="page-header" class="about-header">
+    <h2>#let's_talk</h2>
+    <p>LEAVE A MESSAGE,We love to hear from you!</p>
+  </section>
+<!--    
+<section id="cart" class="section-p1">
+  <table width="100%">
+    <thead>
+      <tr>
+        <td>REMOVE</td>
+        <td>IMAGES</td>
+        <td>PRODUCTS</td>
+        <td>PRICE</td>
+        <td>QUANTITY</td>
+        <td>SUBTOTAL</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+        </td>
+        <td><img src="img/products/f1.jpg" alt="P-1" /></td>
+        <td>Cartoon Astronaut T-shirts</td>
+        <td>₹ 11,365.53</td>
+        <td><input type="number" value="1" /></td>
+        <td>₹ 11,365.539</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+        </td>
+        <td><img src="img/products/f2.jpg" alt="P-1" /></td>
+        <td>Cartoon Astronaut T-shirts</td>
+        <td>$118.19</td>
+        <td><input type="number" value="1" /></td>
+        <td>$118.19</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+        </td>
+        <td><img src="img/products/f3.jpg" alt="P-1" /></td>
+        <td>Cartoon Astronaut T-shirts</td>
+        <td>$118.19</td>
+        <td><input type="number" value="1" /></td>
+        <td>$118.19</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="cart-add" class="section-p1">
+  <div id="coupon">
+    <h3>Apply Coupon</h3>
+    <div>
+      <input type="text" placeholder="Enter Your Coupon Code" />
+      <button class="normal">Apply</button>
+    </div>
+  </div>
+  <div id="sub-total">
+    <h3>Cart Totals</h3>
+    <table>
+      <tr>
+        <td>Cart Subtotal</td>
+        <td>$ 335</td>
+      </tr>
+      <tr>
+        <td>Shipping</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>$ 335</strong></td>
+      </tr>
+    </table>
+    <button class="normal">Proceed to checkout</button>
+  </div>
+</section> -->
+
+
+  <section id="cart" class="section-p1">
+
+    <table width="100%">
+      <thead>
+        <tr>
+          <td>REMOVE</td>
+          <td>IMAGE</td>
+          <td>PRODUCT</td>
+          <td>PRICE</td>
+          <td>QUANTITY</td>
+          <td>SUBTOTAL</td>
+        </tr>
+      </thead>
+
+      <tbody id="cart-items">
+
+        <!-- Product 1 -->
+        <tr>
+          <td>
+            <a href="#" onclick="removeProduct(this)">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </td>
+
+          <td>
+            <img src="img/products/f1.jpg" alt="Astronaut T-Shirt">
+          </td>
+
+          <td>Cartoon Astronaut T-Shirt</td>
+
+          <td class="price">₹1,199.00</td>
+
+          <td>
+            <input type="number" value="1" min="1" onchange="updateCart(this)">
+          </td>
+
+          <td class="subtotal">₹1,199.00</td>
+        </tr>
+
+
+        <!-- Product 2 -->
+        <tr>
+          <td>
+            <a href="#" onclick="removeProduct(this)">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </td>
+
+          <td>
+            <img src="img/products/f2.jpg" alt="Casual Shirt">
+          </td>
+
+          <td>Men's Casual Shirt</td>
+
+          <td class="price">₹899.00</td>
+
+          <td>
+            <input type="number" value="1" min="1" onchange="updateCart(this)">
+          </td>
+
+          <td class="subtotal">₹899.00</td>
+        </tr>
+
+
+        <!-- Product 3 -->
+        <tr>
+          <td>
+            <a href="#" onclick="removeProduct(this)">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </td>
+
+          <td>
+            <img src="img/products/f3.jpg" alt="Printed T-Shirt">
+          </td>
+
+          <td>Printed Fashion T-Shirt</td>
+
+          <td class="price">₹749.00</td>
+
+          <td>
+            <input type="number" value="1" min="1" onchange="updateCart(this)">
+          </td>
+
+          <td class="subtotal">₹749.00</td>
+        </tr>
+
+
+        <!-- Product 4 -->
+        <tr>
+          <td>
+            <a href="#" onclick="removeProduct(this)">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </a>
+          </td>
+
+          <td>
+            <img src="img/products/f4.jpg" alt="Summer Shirt">
+          </td>
+
+          <td>Summer Fashion Shirt</td>
+
+          <td class="price">₹999.00</td>
+
+          <td>
+            <input type="number" value="1" min="1" onchange="updateCart(this)">
+          </td>
+
+          <td class="subtotal">₹999.00</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </section>
+
+
+  <!-- CART TOTAL -->
+
+  <section id="cart-add" class="section-p1">
+    <div id="coupon">
+      <h3>Apply Coupon</h3>
+      <div>
+        <input 
+        type="text" 
+        id="couponCode"
+        placeholder="Enter Your Coupon">
+        <button class="normal" onclick="applyCoupon()">
+          Apply
+      </button>
+      </div>
+      <p id="couponMessage"></p>
+    </div>
+    <div id="sub-total">
+      <h3>Cart Totals</h3>
+      <table>
+        <tr>
+          <td>Cart Subtotal</td>
+          <td id="cart-subtotal">₹0.00</td>
+        </tr>
+        <tr>
+          <td>Discount</td>
+          <td id="discount">₹0.00</td>
+      </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Total</strong>
+          </td>
+          <td>
+            <strong id="cart-total">₹0.00</strong>
+          </td>
+        </tr>
+      </table>
+      <button class="normal" type="button" onclick="proceedToCheckout()">
+    Proceed to Checkout
+   </button>
+    </div>
+  </section>
+
+
+
+
+  <footer class="section-p1">
+    <div class="col">
+      <img src="img/logo.png" alt="logo" class="logoS">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong>Shop No. 12, Jalna Road, CIDCO, Chhatrapati Sambhajinagar, Maharashtra 431003</p>
+      <p><strong>Phone:</strong>+01 8080882122 / (+91) 01 9454102690</p>
+      <p><strong>Hours:</strong>10:00 - 20:00, Mon - Sat</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About Us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Poilcy</a>
+      <a href="#">Terms & Condition</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+      <h4>My Account </h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My WishList</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+        <img src="img/pay/app.jpg" alt="app">
+        <img src="img/pay/play.jpg" alt="play">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="img/pay/pay.png" alt="pay">
+    </div>
+    <div class="copyright">
+      <p>2023 , Tejas Nasre - HTML CSS JS Ecommerce Template</p>
+    </div>
+  </footer>
+
+
+  <script>
+    function updateCart() {
+
+      let rows = document.querySelectorAll("#cart-items tr");
+
+      let total = 0;
+
+      rows.forEach(function (row) {
+
+        let priceText = row.querySelector(".price").innerText;
+
+        // Remove ₹ and comma
+        let price = parseFloat(
+          priceText.replace("₹", "").replace(/,/g, "")
+        );
+
+        let quantity = row.querySelector("input").value;
+
+        quantity = parseInt(quantity);
+
+        if (quantity < 1 || isNaN(quantity)) {
+          quantity = 1;
+          row.querySelector("input").value = 1;
+        }
+
+        let subtotal = price * quantity;
+
+        row.querySelector(".subtotal").innerText =
+          "₹" + subtotal.toLocaleString("en-IN", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+
+        total = total + subtotal;
+      });
+
+
+      // Cart subtotal
+      document.getElementById("cart-subtotal").innerText =
+        "₹" + total.toLocaleString("en-IN", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+
+
+      // Cart total
+      document.getElementById("cart-total").innerText =
+        "₹" + total.toLocaleString("en-IN", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+    }
+    function removeProduct(button) {
+
+      event.preventDefault();
+
+      let row = button.closest("tr");
+
+      row.remove();
+
+      updateCart();
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+
+      updateCart();
+
+    });
+
+
+
+
+
+    let discountAmount = 0;
+
+    function applyCoupon() {
+    
+        const couponInput = document.getElementById("couponCode");
+        const couponMessage = document.getElementById("couponMessage");
+    
+        const coupon = couponInput.value.trim().toUpperCase();
+    
+        if (coupon === "") {
+    
+            couponMessage.innerHTML = "Please enter a coupon code.";
+            couponMessage.style.color = "red";
+    
+            return;
+        }
+    
+        // 10% discount coupon
+        if (coupon === "SAVE10") {
+    
+            discountAmount = 10;
+    
+            couponMessage.innerHTML =
+                "Coupon applied! You got 10% discount.";
+    
+            couponMessage.style.color = "green";
+    
+            updateCart();
+    
+        }
+    
+        // 20% discount coupon
+        else if (coupon === "SAVE20") {
+    
+            discountAmount = 20;
+    
+            couponMessage.innerHTML =
+                "Coupon applied! You got 20% discount.";
+    
+            couponMessage.style.color = "green";
+    
+            updateCart();
+    
+        }
+        // 30% discount coupon
+        else if(coupon === "SAVE30"){
+          discountAmount = 30;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 30% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 10% discount coupon
+        else if(coupon === "GT10"){
+          discountAmount = 10;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 10% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 20% discount coupon
+        else if(coupon === "GT20"){
+          discountAmount = 20;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 20% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 30% discount coupon
+        else if(coupon === "GT30"){
+          discountAmount = 30;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 30% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 10% discount coupon
+        else if(coupon === "NOVA10"){
+          discountAmount = 10;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 10% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 30% discount coupon
+        else if(coupon === "NOVA20"){
+          discountAmount = 20;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 20% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+        // 30% discount coupon
+        else if(coupon === "NOVA30"){
+          discountAmount = 30;
+          couponMessage.innerHTML = 
+          " Coupon applied! You got 30% discount.";
+           couponMessage.style.color = "green";
+            updateCart();
+        }
+    
+        else {
+    
+            discountAmount = 0;
+    
+            couponMessage.innerHTML =
+                "Invalid coupon code.";
+    
+            couponMessage.style.color = "red";
+    
+            updateCart();
+        }
+    }
+
+
+    function updateCart() {
+
+      let rows = document.querySelectorAll("#cart-items tr");
+  
+      let total = 0;
+  
+      rows.forEach(function(row) {
+  
+          let priceText = row.querySelector(".price").innerText;
+  
+          let price = parseFloat(
+              priceText.replace("₹", "").replace(/,/g, "")
+          );
+  
+          let quantity = parseInt(
+              row.querySelector("input").value
+          );
+  
+          if (quantity < 1 || isNaN(quantity)) {
+              quantity = 1;
+              row.querySelector("input").value = 1;
+          }
+  
+          let subtotal = price * quantity;
+  
+          row.querySelector(".subtotal").innerText =
+              "₹" + subtotal.toLocaleString("en-IN", {
+                  minimumFractionDigits: 2
+              });
+  
+          total += subtotal;
+      });
+  
+  
+      // Cart subtotal
+      document.getElementById("cart-subtotal").innerText =
+          "₹" + total.toLocaleString("en-IN", {
+              minimumFractionDigits: 2
+          });
+  
+  
+      // Calculate discount
+      let discount = total * discountAmount / 100;
+  
+      document.getElementById("discount").innerText =
+          "- ₹" + discount.toLocaleString("en-IN", {
+              minimumFractionDigits: 2
+          });
+  
+  
+      // Final total
+      let finalTotal = total - discount;
+  
+      document.getElementById("cart-total").innerText =
+          "₹" + finalTotal.toLocaleString("en-IN", {
+              minimumFractionDigits: 2
+          });
+  }
+
+
+
+  function proceedToCheckout() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    // Save the current cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Open checkout page
+    window.location.href = "checkout.html";
+}
+
+
+
+
+  </script>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

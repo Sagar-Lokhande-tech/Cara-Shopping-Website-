@@ -1,0 +1,132 @@
+#checkout {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+#checkout h2 {
+    text-align: center;
+    align-items: center;
+    
+    margin-bottom: 40px;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.customer-details {
+    width: 100%;
+     
+}
+
+.customer-details h3 {
+    margin-bottom: 20px;
+}
+
+.customer-details label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.customer-details input,
+.customer-details textarea,
+.customer-details select {
+    width: 200%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.customer-details textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.customer-details button {
+    display: block;
+
+    width: 200px;
+    height: 55px;
+
+    margin: 25px auto 0;
+
+    background: linear-gradient(135deg, rgb(153, 153, 153), rgb(90, 90, 90));
+    color: white;
+
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 30px;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 18px rgba(153, 153, 153, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.customer-details button:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    background: linear-gradient(135deg, rgb(175, 175, 175), rgb(110, 110, 110));
+
+    box-shadow: 0 10px 25px rgba(153, 153, 153, 0.55);
+}
+
+.customer-details button:active {
+    transform: scale(0.97);
+}
+
+.order-summary {
+    width: 40%;
+    border: 1px solid #ddd;
+    padding: 25px;
+    height: fit-content;
+}
+
+.order-product {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-product img {
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.order-product p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 477px) {
+
+    .checkout-container {
+        flex-direction: column;
+    }
+
+    .customer-details,
+    .order-summary {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara-EcommerceWebsite</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a></li>
+                <a href="#" id="close"><i class="fa fa-times" aria-hidden="true"></i>
+                    </i></a>
+
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="card.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+    </section>
+    <section id="prodetails" class="section-p1">
+
+        <div class="single-pro-img">
+
+            <img src="img/products/f1.jpg" alt="P-1" width="100%" id="mainImg">
+
+            <div class="small-img-group">
+
+                <div class="small-img-col">
+                    <img src="img/products/f1.jpg" width="100%" alt="P-1" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="img/products/f2.jpg" width="100%" alt="P-2" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="img/products/f3.jpg" width="100%" alt="P-3" class="small-img">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="img/products/f4.jpg" width="100%" alt="P-4" class="small-img">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="single-pro-details">
+
+            <h5>Home / T-Shirt</h5>
+
+            <h4 id="productName">Man's Fashion T-Shirt</h4>
+
+            <h2 id="productPrice">₹ 7,501.00</h2>
+
+            <select id="productSize">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                <option value="XXXL">XXXL</option>
+            </select>
+
+            <input type="number" id="productQuantity" value="1" min="1">
+
+            <button class="normal" onclick="addToCart()">
+                Add to Cart
+            </button>
+
+            <p id="cartMessage"></p>
+
+            <h4>Product Details</h4>
+
+            <span>
+                This stylish men's fashion t-shirt boasts a modern and sleek
+                design, perfect for the contemporary urban wardrobe. The unique
+                graphic print on the front adds an eye-catching element to
+                elevate any casual outfit.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Product</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/products/n1.jpg" alt="N-1">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>₹6,295.78</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n2.jpg" alt="N-2">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>₹6,295.78</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n3.jpg" alt="N-3">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>$₹6,295.78</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n4.jpg" alt="N-4">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>₹6,295.78</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>sign up for newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" id="email" placeholder="Your email address">
+            <button type="button" class="normal" onclick="startMembership()">
+                Sign Up
+            </button>
+            <p id="message" style="margin-top: 15px; text-align: center; color: rgb(243, 241, 241);"></p>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/logo.png" alt="logo" class="logoS">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>Shop No. 12, Jalna Road, CIDCO, Chhatrapati Sambhajinagar, Maharashtra 431003
+            </p>
+            <p><strong>Phone:</strong>+01 8080882122 / (+91) 01 9454102690</p>
+            <p><strong>Hours:</strong>10:00 - 20:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Poilcy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account </h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My WishList</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="app">
+                <img src="img/pay/play.jpg" alt="play">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="pay">
+        </div>
+        <div class="copyright">
+            <p>2023 , Tejas Nasre - HTML CSS JS Ecommerce Template</p>
+        </div>
+    </footer>
+
+    <script>
+        var mainImg = document.getElementById("mainImg");
+        var smallImg = document.getElementsByClassName("small-img");
+
+        smallImg[0].addEventListener("click", () => {
+            mainImg.src = smallImg[0].src;
+        })
+        smallImg[1].addEventListener("click", () => {
+            mainImg.src = smallImg[1].src;
+        })
+        smallImg[2].addEventListener("click", () => {
+            mainImg.src = smallImg[2].src;
+        })
+        smallImg[3].addEventListener("click", () => {
+            mainImg.src = smallImg[3].src;
+        })
+
+        document.getElementById("productPrice").textContent = "₹ 7,501.00";
+
+
+
+
+
+        
+
+        function addToCart() {
+
+            // Product information
+            const name = document.getElementById("productName").innerText;
+            const priceText = document.getElementById("productPrice").innerText;
+            const size = document.getElementById("productSize").value;
+            const quantity = parseInt(
+                document.getElementById("productQuantity").value
+            );
+        
+            // Convert price to number
+            const price = parseFloat(
+                priceText.replace("$", "")
+            );
+        
+            // Product image
+            const image = document.getElementById("mainImg").src;
+        
+            // Check quantity
+            if (quantity < 1 || isNaN(quantity)) {
+                alert("Please select a valid quantity");
+                return;
+            }
+        
+            // Create product object
+            const product = {
+                name: name,
+                price: price,
+                size: size,
+                quantity: quantity,
+                image: image
+            };
+        
+            // Get existing cart
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+            // Add product
+            cart.push(product);
+        
+            // Save cart
+            localStorage.setItem("cart", JSON.stringify(cart));
+        
+            // Message
+            const message = document.getElementById("cartMessage");
+        
+            message.innerHTML = "Product added to cart successfully!";
+            message.style.color = "green";
+        
+            // Go to cart after 1 second
+            setTimeout(function() {
+                window.location.href = "cart.html";
+            }, 1000);
+        }
+
+
+
+
+
+
+        
+
+
+    </script>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

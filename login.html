@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Cara Shopping</title>
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+    }
+    
+    body {
+        min-height: 100vh;
+        background: #f5f7fa;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 20px;
+    }
+    
+    
+    /* Main Container */
+    
+    .login-container {
+        width: 100%;
+        max-width: 1000px;
+        min-height: 600px;
+    
+        display: flex;
+    
+        background: white;
+    
+        border-radius: 25px;
+    
+        overflow: hidden;
+    
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+    
+    
+    /* =========================
+       LEFT SECTION
+    ========================= */
+    
+    .login-left {
+        width: 45%;
+    
+        background: linear-gradient(
+            135deg,
+            #088178,
+            #065f59
+        );
+    
+        color: white;
+    
+        padding: 55px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        position: relative;
+        overflow: hidden;
+    }
+    
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    
+        gap: 10px;
+    
+        font-size: 28px;
+        font-weight: 700;
+    
+        margin-bottom: 60px;
+    }
+    
+    .logo i {
+        font-size: 32px;
+    }
+    
+    
+    .login-left h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    
+    .login-left p {
+        font-size: 15px;
+        line-height: 1.7;
+    
+        opacity: 0.9;
+    
+        max-width: 350px;
+    }
+    
+    
+    .shopping-image {
+        width: 180px;
+        height: 180px;
+    
+        border-radius: 50%;
+    
+        background: rgba(255,255,255,0.12);
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        margin: 50px auto 0;
+    
+        animation: floating 3s ease-in-out infinite;
+    }
+    
+    .shopping-image i {
+        font-size: 80px;
+    }
+    
+    
+    @keyframes floating {
+    
+        0%, 100% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+    
+    
+    /* =========================
+       RIGHT SECTION
+    ========================= */
+    
+    .login-right {
+        width: 55%;
+    
+        padding: 55px;
+    
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .login-right form {
+        width: 100%;
+        max-width: 450px;
+    
+        margin: auto;
+    }
+    
+    
+    .login-right h2 {
+        font-size: 34px;
+    
+        color: #222;
+    
+        margin-bottom: 8px;
+    }
+    
+    
+    .subtitle {
+        color: #777;
+    
+        font-size: 14px;
+    
+        margin-bottom: 35px;
+    }
+    
+    
+    /* Input */
+    
+    .input-box {
+        margin-bottom: 22px;
+    }
+    
+    
+    .input-box label {
+        display: block;
+    
+        font-size: 14px;
+    
+        font-weight: 600;
+    
+        color: #333;
+    
+        margin-bottom: 8px;
+    }
+    
+    
+    .input-field {
+        height: 52px;
+    
+        border: 1px solid #ddd;
+    
+        border-radius: 10px;
+    
+        display: flex;
+        align-items: center;
+    
+        padding: 0 15px;
+    
+        transition: 0.3s;
+    }
+    
+    
+    .input-field:focus-within {
+        border-color: #088178;
+    
+        box-shadow: 0 0 0 3px rgba(8,129,120,0.1);
+    }
+    
+    
+    .input-field > i:first-child {
+        color: #888;
+    
+        margin-right: 12px;
+    }
+    
+    
+    .input-field input {
+        width: 100%;
+    
+        border: none;
+        outline: none;
+    
+        font-size: 14px;
+    }
+    
+    
+    #togglePassword {
+        cursor: pointer;
+    
+        color: #888;
+    
+        margin-left: 10px;
+    }
+    
+    
+    small {
+        display: block;
+    
+        color: #e74c3c;
+    
+        font-size: 12px;
+    
+        margin-top: 5px;
+    }
+    
+    
+    /* Login Options */
+    
+    .login-options {
+        display: flex;
+    
+        justify-content: space-between;
+    
+        align-items: center;
+    
+        margin: 5px 0 25px;
+    
+        font-size: 13px;
+    }
+    
+    
+    .remember {
+        color: #666;
+    
+        cursor: pointer;
+    }
+    
+    
+    .remember input {
+        accent-color: #088178;
+    
+        margin-right: 5px;
+    }
+    
+    
+    .login-options a {
+        color: #088178;
+    
+        text-decoration: none;
+    
+        font-weight: 600;
+    }
+    
+    
+    .login-options a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    /* Login Button */
+    
+    .login-btn {
+        width: 100%;
+    
+        height: 52px;
+    
+        border: none;
+    
+        border-radius: 10px;
+    
+        background: #088178;
+    
+        color: white;
+    
+        font-size: 15px;
+    
+        font-weight: 600;
+    
+        cursor: pointer;
+    
+        transition: 0.3s;
+    
+        display: flex;
+    
+        justify-content: center;
+    
+        align-items: center;
+    
+        gap: 10px;
+    }
+    
+    
+    .login-btn:hover {
+        background: #066e68;
+    
+        transform: translateY(-2px);
+    
+        box-shadow: 0 8px 20px rgba(8,129,120,0.25);
+    }
+    
+    
+    /* Divider */
+    
+    .divider {
+        display: flex;
+    
+        align-items: center;
+    
+        gap: 15px;
+    
+        margin: 25px 0;
+    
+        color: #aaa;
+    
+        font-size: 12px;
+    }
+    
+    
+    .divider::before,
+    .divider::after {
+        content: "";
+    
+        height: 1px;
+    
+        background: #ddd;
+    
+        flex: 1;
+    }
+    
+    
+    /* Google Button */
+    
+    .google-btn {
+        width: 100%;
+    
+        height: 50px;
+    
+        border: 1px solid #ddd;
+    
+        background: white;
+    
+        border-radius: 10px;
+    
+        cursor: pointer;
+    
+        font-size: 14px;
+    
+        font-weight: 500;
+    
+        color: #444;
+    
+        transition: 0.3s;
+    }
+    
+    
+    .google-btn i {
+        margin-right: 8px;
+    
+        color: #db4437;
+    }
+    
+    
+    .google-btn:hover {
+        background: #f8f8f8;
+    }
+    
+    
+    /* Register */
+    
+    .register {
+        text-align: center;
+    
+        font-size: 13px;
+    
+        color: #777;
+    
+        margin-top: 25px;
+    }
+    
+    
+    .register a {
+        color: #088178;
+    
+        font-weight: 600;
+    
+        text-decoration: none;
+    }
+    
+    
+    .register a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    
+    @media (max-width: 800px) {
+    
+        .login-container {
+            max-width: 500px;
+    
+            min-height: auto;
+        }
+    
+        .login-left {
+            display: none;
+        }
+    
+        .login-right {
+            width: 100%;
+    
+            padding: 45px 30px;
+        }
+    }
+    
+    
+    @media (max-width: 400px) {
+    
+        body {
+            padding: 10px;
+        }
+    
+        .login-container {
+            border-radius: 15px;
+        }
+    
+        .login-right {
+            padding: 35px 20px;
+        }
+    
+        .login-right h2 {
+            font-size: 28px;
+        }
+    
+        .login-options {
+            font-size: 12px;
+        }
+    }
+  </style>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Left Section -->
+        <div class="login-left">
+
+            <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cara</span>
+            </div>
+
+            <h1>Welcome Back!</h1>
+
+            <p>
+                Login to your account and continue shopping
+                your favorite products.
+            </p>
+
+            <div class="shopping-image">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+
+
+        <!-- Right Section -->
+        <div class="login-right">
+
+            <form id="loginForm">
+
+                <h2>Sign In</h2>
+
+                <p class="subtitle">
+                    Welcome back! Please login to your account.
+                </p>
+
+
+                <!-- Email -->
+                <div class="input-box">
+
+                    <label for="email">Email Address</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <small id="emailError"></small>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-box">
+
+                    <label for="password">Password</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="password" placeholder="Enter your password">
+
+                        <i class="fa-solid fa-eye" id="togglePassword"></i>
+                    </div>
+
+                    <small id="passwordError"></small>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="login-options">
+
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">
+                    Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- Social Login -->
+                <button type="button" class="google-btn">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                </button>
+
+
+                <!-- Register -->
+                <p class="register">
+                    Don't have an account?
+                    <a href="register.html">Create Account</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        // Get elements
+
+            const loginForm = document.getElementById("loginForm");
+
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+
+            const emailError = document.getElementById("emailError");
+            const passwordError = document.getElementById("passwordError");
+
+            const togglePassword = document.getElementById("togglePassword");
+
+
+            // ============================
+            // SHOW / HIDE PASSWORD
+            // ============================
+
+            togglePassword.addEventListener("click", function () {
+
+                if (password.type === "password") {
+
+                    password.type = "text";
+
+                    togglePassword.classList.remove("fa-eye");
+
+                    togglePassword.classList.add("fa-eye-slash");
+
+                } else {
+
+                    password.type = "password";
+
+                    togglePassword.classList.remove("fa-eye-slash");
+
+                    togglePassword.classList.add("fa-eye");
+                }
+
+            });
+
+
+            // ============================
+            // LOGIN VALIDATION
+            // ============================
+
+            loginForm.addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                let isValid = true;
+
+
+                // Clear errors
+
+                emailError.textContent = "";
+                passwordError.textContent = "";
+
+
+                // Email validation
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (email.value.trim() === "") {
+
+                    emailError.textContent =
+                        "Please enter your email address.";
+
+                    isValid = false;
+
+                } else if (!emailPattern.test(email.value.trim())) {
+
+                    emailError.textContent =
+                        "Please enter a valid email address.";
+
+                    isValid = false;
+                }
+
+
+                // Password validation
+
+                if (password.value.trim() === "") {
+
+                    passwordError.textContent =
+                        "Please enter your password.";
+
+                    isValid = false;
+
+                } else if (password.value.length < 6) {
+
+                    passwordError.textContent =
+                        "Password must contain at least 6 characters.";
+
+                    isValid = false;
+                }
+
+
+                // Successful login
+
+                if (isValid) {
+
+                    alert("Login successful! Welcome to Cara Shopping 🛍️");
+
+                    // Redirect after successful login
+                    // window.location.href = "index.html";
+
+                }
+
+             });
+    </script>
+
+
+    <!-- JavaScript
+    <script src="login.js"></script> -->
+
+</body>
+
+</html>

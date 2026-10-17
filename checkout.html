@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Cara</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/.png">
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+    <section id="checkout" class="section-p1">
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <!-- CUSTOMER DETAILS -->
+            <div class="customer-details">
+                <h3>Billing Details</h3>
+                <form id="checkoutForm">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required />
+                    <label>Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="Enter mobile number" maxlength="10" required />
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required />
+                    <label>Address</label>
+                    <textarea id="address" placeholder="Enter your complete address" required></textarea>
+                    <label>City</label>
+                    <input type="text" id="city" placeholder="Enter city" required />
+                    <label>PIN Code</label>
+                    <input type="text" id="pincode" placeholder="Enter PIN code" maxlength="6" required />
+                    <h3>Payment Method</h3>
+                    <select id="payment" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Credit / Debit Card</option>
+                    </select>
+                    <button type="submit" class="normal">Place Order</button>
+                </form>
+            </div>
+            <!-- ORDER SUMMARY -->
+          
+        </div>
+    </section>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+         let total = 0;
+
+         
+
+        // SHOW PRODUCTS
+        function showOrder() {
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                let orderItems = document.getElementById("orderItems");
+                let orderTotal = document.getElementById("orderTotal");
+
+                orderItems.innerHTML = "";
+
+                let total = 0;
+
+                if (cart.length === 0) {
+
+                    orderItems.innerHTML =
+                        "<p>Your cart is empty.</p>";
+
+                    orderTotal.innerText = "₹0.00";
+
+                    return;
+                }
+
+                cart.forEach(function (item) {
+
+                    // Convert price to number
+                    let price = Number(item.price);
+
+                    let quantity = Number(item.quantity) || 1;
+
+                    let subtotal = price * quantity;
+
+                    total += subtotal;
+
+                    orderItems.innerHTML += `
+                
+                    <div class="order-product">
+        
+                        <img 
+                            src="${item.image}" 
+                            alt="${item.name}"
+                            width="70"
+                        >
+        
+                        <div>
+        
+                            <strong>${item.name}</strong>
+        
+                            <p>Size: ${item.size}</p>
+        
+                            <p>Quantity: ${quantity}</p>
+        
+                            <p>
+                                ₹${subtotal.toLocaleString("en-IN", {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    })}
+                </p>
+        
+            </div>
+        
+        </div>
+        
+                `;
+                });
+
+                // DISPLAY FINAL TOTAL
+                orderTotal.innerText =
+                    "₹" + total.toLocaleString("en-IN", {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+            }
+
+
+            // Run when checkout page opens
+            document.addEventListener("DOMContentLoaded", function () {
+                showOrder();
+             });
+
+        // PLACE ORDER
+        document
+            .getElementById("checkoutForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+
+                const mobile = document.getElementById("mobile").value.trim();
+
+                const email = document.getElementById("email").value.trim();
+
+                const address = document.getElementById("address").value.trim();
+
+                const city = document.getElementById("city").value.trim();
+
+                const pincode = document.getElementById("pincode").value.trim();
+
+                const payment = document.getElementById("payment").value;
+
+                // MOBILE VALIDATION
+
+                if (!/^[0-9]{10}$/.test(mobile)) {
+                    alert("Please enter a valid 10 digit mobile number.");
+
+                    return;
+                }
+
+                // PIN CODE VALIDATION
+
+                if (!/^[0-9]{6}$/.test(pincode)) {
+                    alert("Please enter a valid 6 digit PIN code.");
+
+                    return;
+                }
+
+                // CREATE ORDER NUMBER
+
+                const orderNumber = "ORD" + Date.now();
+
+                // SUCCESS MESSAGE
+ 
+                  alert(
+                      "Order placed successfully!\n\n" +
+                      "Thank you for your order.\n\n" +
+                      "----- Order Details -----\n" +
+                      "Order ID: " + orderNumber + "\n" +
+                      "Name: " + name + "\n" +
+                      "Payment: " + payment + "\n\n" +
+                      "Go to Home"
+                  );
+ 
+
+ 
+
+
+                // CLEAR CART
+
+                localStorage.removeItem("cart");
+
+                // GO TO HOME
+
+                window.location.href = "index.html";
+            });
+
+        showOrder();
+        </script>
+    </body>
+
+</html>
