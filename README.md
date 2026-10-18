@@ -40,25 +40,21 @@ The website includes pages for browsing products, viewing individual product inf
 
 Note: Features requiring a backend, database, payment gateway, or real authentication depend on additional implementation and configuration.
 
+ 
 ## 📸 Project Screenshots
 
 ### 🏠 Home Page
-![Cara Shopping Website Home Page](screenshots/home.png)
+[![Cara Shopping Website - Home Page](screenshots/home.png)](screenshots/home.png)
 
 ### 🛍️ Shop Page
-![Cara Shopping Website Shop Page](screenshots/shop.png)
+[![Cara Shopping Website - Shop Page](screenshots/shop.png)](screenshots/shop.png)
 
-### 👕 Product Details Page
-![Product Details](screenshots/product-details.png)
+### 👕 Product Details
+[![Cara Shopping Website - Product Details](screenshots/product.png)](screenshots/product.png)
 
 ### 🛒 Shopping Cart
-![Shopping Cart](screenshots/cart.png)
+[![Cara Shopping Website - Shopping Cart](screenshots/cart.png)](screenshots/cart.png)
 
-### 🔐 Login Page
-![Login Page](screenshots/login.png)
-
-### 💳 Checkout Page
-![Checkout Page](screenshots/checkout.png)
 
 
 ## Technologies Used
