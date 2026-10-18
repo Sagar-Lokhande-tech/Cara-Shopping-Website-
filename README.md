@@ -43,11 +43,11 @@ Note: Features requiring a backend, database, payment gateway, or real authentic
 
 # Cara Shopping Website — Screenshots
 
-## 🏠 Home Page
-[![Home Page](./home.png)](./home.png)
-
 ## 🔐 Login Page
 [![Login Page](./login.png)](./login.png)
+
+## 🏠 Home Page
+[![Home Page](./home.png)](./home.png)
 
 ## 🛍️ Product Quality
 [![Product Quality](./quality.png)](./quality.png)
