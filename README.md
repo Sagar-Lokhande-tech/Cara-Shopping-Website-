@@ -52,11 +52,11 @@ Note: Features requiring a backend, database, payment gateway, or real authentic
 ## 🛍️ Product Quality
 [![Product Quality](./quality.png)](./quality.png)
 
-## 🛒 Order Summary
-[![Order Summary](./subtotal.png)](./subtotal.png)
-
 ## 💳 Checkout Page
 [![Checkout Page](./check.png)](./check.png)
+
+## 🛒 Order Summary
+[![Order Summary](./subtotal.png)](./subtotal.png)
 
 ## 📦 Order Details
 [![Order Details](./order.png)](./order.png)
