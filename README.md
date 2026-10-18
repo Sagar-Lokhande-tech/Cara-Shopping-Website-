@@ -6,6 +6,7 @@ A responsive e-commerce shopping website built using HTML, CSS, and JavaScript. 
 
 - [About the Project](#about-the-project)
 - [Features](#features)
+- [Screenshots](#Screenshots)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
@@ -38,6 +39,27 @@ The website includes pages for browsing products, viewing individual product inf
 - Product images, icons, and styling for an improved user experience.
 
 Note: Features requiring a backend, database, payment gateway, or real authentication depend on additional implementation and configuration.
+
+
+# Cara Shopping Website — Screenshots
+
+## 🏠 Home Page
+[![Home Page](./home.png)](./home.png)
+
+## 🔐 Login Page
+[![Login Page](./login.png)](./login.png)
+
+## 🛍️ Product Quality
+[![Product Quality](./quality.png)](./quality.png)
+
+## 🛒 Order Summary
+[![Order Summary](./subtotal.png)](./subtotal.png)
+
+## 💳 Checkout Page
+[![Checkout Page](./check.png)](./check.png)
+
+## 📦 Order Details
+[![Order Details](./order.png)](./order.png)
 
 
 ## Technologies Used
