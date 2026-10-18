@@ -6,6 +6,7 @@ A responsive e-commerce shopping website built using HTML, CSS, and JavaScript. 
 
 - [About the Project](#about-the-project)
 - [Features](#features)
+- [ Project Screenshots](#Project-Screenshots)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
